@@ -25,7 +25,7 @@
             FontSize="40"
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
-            TextColor="{StaticResource White}"/>
+            TextColor="{StaticResource Cyan}"/>
 
         <Frame Padding="10">
             <VerticalStackLayout>
@@ -33,11 +33,13 @@
                      ColumnDefinitions="*, *, 2*">
                     <Label Grid.Row="0" Grid.Column="0"
                            Text="Adultos:"
+                           Margin="5"
                            FontAttributes="Bold"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
                            TextColor="{StaticResource White}"
                            Text="{Binding Value}"
+                           Margin="5"
                            BindingContext="{x:Reference stp_adultos}"/>
 
                     <Stepper Grid.Row="0" Grid.Column="2"
@@ -48,11 +50,13 @@
                     
                     <Label Grid.Row="1" Grid.Column="0"
                            Text="Crianças:"
+                           Margin="5"
                            FontAttributes="Bold"/>
                     
                     <Label Grid.Row="1" Grid.Column="1"
                            TextColor="{StaticResource White}"
                            Text="{Binding Value}"
+                           Margin="5"
                            BindingContext="{x:Reference stp_criancas}"/>
 
                     <Stepper Grid.Row="1" Grid.Column="2"
@@ -65,15 +69,17 @@
                 <Label Text="Escolha sua suíte"
                        FontAttributes="Bold"
                        FontSize="15"
-                       Margin="10"/>
+                       Margin="20"/>
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione sua Acomodação" />
+                        Title="Selecione sua Acomodação"
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10">
                     <VerticalStackLayout>
                         <Label Text="Período da Estadia"
+                               Margin="20"
                                FontAttributes="Bold"
                                FontSize="14"/>
                         
@@ -81,6 +87,7 @@
                             <Label Text="Checkin:"
                                    Margin="10"/>
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
