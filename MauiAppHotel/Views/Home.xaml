@@ -4,7 +4,7 @@
              x:Class="MauiAppHotel.Home"
              Title="Boas-Vindas"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource OffBlack}">
+             BackgroundColor="{StaticResource Black}">
 
     <ContentPage.Content>
         <Grid>
@@ -14,28 +14,33 @@
                 Spacing="30"
                 Padding="3">
 
-                <Label  Text="Bem-vindo ao Hotel Transilvânia 👻"
-                        FontSize="Large"
+                <Image  Source="ghost_hotel.png" 
+                        WidthRequest="550" 
+                        HeightRequest="120" 
+                        Aspect="AspectFit"
+                        HorizontalOptions="Center"
+                        Margin="0, 0, 0, 10" />
+
+                <Label  Text="Bem-vindo ao Ghost Hotel 👻"
+                        FontSize="30"
+                        FontFamily="WDXL"
                         FontAttributes="Bold"
                         HorizontalTextAlignment="Center"
                         VerticalTextAlignment="Center"
-                        TextColor="{StaticResource Cyan}" />
+                        TextColor="Orange" />
 
-                <Label  Text="🏨"
-                        FontSize="100"
-                        HorizontalOptions="Center" />
-
-                <Label  Text="Reserve sua estadia e aproveite o nosso luxuoso Hotel!"
-                        FontSize="Medium"
-                        HorizontalOptions="Center"
+                <Label  Text="Reserve sua diária e aproveite o nosso luxuoso Hotel!"
+                        FontSize="16"
+                        VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center" />
 
                 <Button Text="Começar Agora"
                         Clicked="OnComecarClicked"
-                        TextColor="White"
+                        TextColor="Black"
+                        FontSize="15"
                         FontAttributes="Bold"
-                        BackgroundColor="MidnightBlue"
-                        WidthRequest="200"
+                        BackgroundColor="AliceBlue"
+                        WidthRequest="150"
                         HeightRequest="50"
                         Margin="0, 20, 0, 0" />
 
