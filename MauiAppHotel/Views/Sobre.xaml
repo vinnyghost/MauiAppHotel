@@ -57,17 +57,23 @@
                    VerticalTextAlignment="Center"/>
         </HorizontalStackLayout>
 
-        <Label Margin="10">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span Text="Copyright © 2025 " 
+        <HorizontalStackLayout>
+
+            <Label Margin="10">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Copyright © 2025 " 
                           TextColor="MediumSpringGreen" 
                           FontSize="16"/>
-                    <Span Text="VinnyGhost. Todos os direitos reservados." 
+                        <Span Text="VinnyGhost. Todos os direitos reservados." 
                           FontSize="14"/>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+        </HorizontalStackLayout>
+
+
 
         <HorizontalStackLayout Margin="10">
             <Label Text="Licença:" 
